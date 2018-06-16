@@ -34,6 +34,9 @@ on fs
     chown system drmrpc /dev/qseecom
     chmod 0664 /dev/ion
     chown system system /dev/ion
+    
+    chown root shell /sys/android_touch/doubletap2wake
+
     install_keyring
 
 # Separate copy needed to use /sbin/linker64 instead of /system/bin/linker64
@@ -119,3 +122,5 @@ on property:sys.listeners.registered=true
     start keymaster-3-0
     start gatekeeper-1-0
     start servicemanager
+
+    write /sys/android_touch/doubletap2wake 1
