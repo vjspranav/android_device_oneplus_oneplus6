@@ -30,8 +30,8 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/oneplus/enchilada/device.mk)
 
 # Time Zone data for recovery
-PRODUCT_COPY_FILES += \
-    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+#PRODUCT_COPY_FILES += \
+#    bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
 # Inherit Telephony packages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
