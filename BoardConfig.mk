@@ -91,6 +91,7 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 100
 TW_THEME := portrait_hdpi
 TW_USE_QCOM_HAPTICS_VIBRATOR := true
+
 TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
 TW_RECOVERY_ADDITIONAL_RELINK_FILES := ${OUT}/system/lib64/android.hardware.boot@1.0.so
 
@@ -102,3 +103,5 @@ TW_NO_SCREEN_BLANK := true
 # Encryption
 PLATFORM_SECURITY_PATCH := 2025-12-31
 TW_INCLUDE_CRYPTO := true
+
+
