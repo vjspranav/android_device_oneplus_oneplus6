@@ -102,3 +102,7 @@ TW_EXCLUDE_MTP := true
 # Encryption
 PLATFORM_SECURITY_PATCH := 2018-05-01
 TW_INCLUDE_CRYPTO := true
+
+# Debug flags
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
