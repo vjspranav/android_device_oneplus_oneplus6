@@ -92,11 +92,13 @@ TW_MAX_BRIGHTNESS := 100
 TW_THEME := portrait_hdpi
 TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
 TW_RECOVERY_ADDITIONAL_RELINK_FILES := ${OUT}/system/lib64/android.hardware.boot@1.0.so
+
 # MTP seems to cause a kernel panic, at least with some kernels, so disable it for now
-TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
-TW_NO_SCREEN_BLANK := true
+#TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
+#TW_NO_SCREEN_BLANK := true
+
 # to add vibration repopick 31021
-TW_USE_QCOM_HAPTICS_VIBRATOR := true
+TW_USE_LEDS_HAPTICS := true
 
 # Encryption
 PLATFORM_SECURITY_PATCH := 2018-05-01

@@ -19,6 +19,16 @@ PRODUCT_RELEASE_NAME := enchilada
 
 $(call inherit-product, build/target/product/embedded.mk)
 
+# Specify phone tech before including full_phone
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
+# Inherit language packages
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+PRODUCT_PACKAGES += \
+	charger_res_images \
+	charger
+
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
