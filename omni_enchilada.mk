@@ -22,6 +22,16 @@ $(call inherit-product, build/target/product/embedded.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Inherit language packages
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Specify phone tech before including full_phone
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
+PRODUCT_PACKAGES += \
+	charger_res_images \
+	charger
+
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/oneplus/enchilada/device.mk)
 
